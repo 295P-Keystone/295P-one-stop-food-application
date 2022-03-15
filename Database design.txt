@@ -1,0 +1,32 @@
+ID - Primary_key - INT
+CODE - VARCHAR
+NAME - VARCHAR
+THUMBNAIL - VARCHAR
+INGREDIENTS - JSON
+STEPS - JSON
+TIME_TAKEN - VARCHAR
+HYPERLINK - VARCHAR
+
+INGREDIENTS = {
+	'Ingredients': [{
+		'Name': (VARCHAR),
+		'Qty': (INT)
+		'Unit': (VARCHAR)
+	}, {
+		'Name': (VARCHAR),
+		'Qty': (INT)
+		'Unit': (VARCHAR)
+	},{
+		...
+	}],
+	'Count': (INT)
+}
+
+STEPS = {
+	'Steps': [
+		'Step1',
+		'Step2',
+		...
+	],
+	'Count': (INT)
+}

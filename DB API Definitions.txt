@@ -1,0 +1,50 @@
+GET /recipe
+Input: 'CODE'
+Output: <JSON for recipe>
+Error if invalid CODE
+
+POST /recipe
+Input: <JSON for recipe>
+Output: True
+Error if invalid JSON formatting or missing fields
+
+PUT /recipe
+Input: 'CODE', <JSON for recipe>
+Output: True
+Error if invalid CODE or invalid JSON formatting or missing fields 
+
+DELETE /recipe
+Input: 'CODE'
+Output: True
+Error if invalid CODE
+
+recipe_JSON = {
+	'ID': '1',
+	'CODE': 'CHOC_CAKE',
+	'NAME': 'Chocolate Cake',
+	'THUMBNAIL': '<url>',
+	'INGREDIENTS': {
+		'Ingredients': [{
+			'Name': (VARCHAR),
+			'Qty': (INT)
+			'Unit': (VARCHAR)
+		}, {
+			'Name': (VARCHAR),
+			'Qty': (INT)
+			'Unit': (VARCHAR)
+		},{
+			...
+		}],
+		'Count': (INT)
+	},
+	STEPS: {
+		'Steps': [
+			'Step1',
+			'Step2',
+			...
+		],
+		'Count': (INT)
+	},
+	'TIME_TAKEN': '45 minutes',
+	'HYPERLINK': '<url>'
+}
